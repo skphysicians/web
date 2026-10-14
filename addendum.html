@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Addendum: Palestine 2026 &ndash; Saskatchewan Physicians for Justice and Peace</title>
+  <style>
+    /* ── Reset ───────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── Design tokens ───────────────────────────── */
+    :root {
+      --navy:       #1a3560;
+      --blue:       #2a5298;
+      --olive:      #4a7a3a;
+      --olive-pale: #dde8d8;
+      --sky:        #a8c4e8;
+      --bg:         #f7f6f2;
+      --text:       #2c2c2c;
+      --sans:       -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --serif:      Georgia, 'Times New Roman', serif;
+    }
+
+    body {
+      font-family: var(--serif);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    /* ── Header: logo + title side-by-side ───────── */
+    header {
+      background: var(--navy);
+      padding: 2.5rem 2rem;
+    }
+
+    .header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    header img {
+      flex-shrink: 0;
+      width: 110px;
+      height: auto;
+      background: #fff;
+      border-radius: 10px;
+      padding: 0.6rem;
+      box-shadow: 0 3px 16px rgba(0,0,0,0.4);
+    }
+
+    .header-text h1 {
+      font-family: var(--sans);
+      font-size: clamp(1.25rem, 3.2vw, 1.95rem);
+      font-weight: 600;
+      color: #fff;
+      letter-spacing: 0.01em;
+      line-height: 1.25;
+    }
+
+    .abbr-tag {
+      display: inline-block;
+      margin-top: 0.55rem;
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--sky);
+      border: 1px solid rgba(168,196,232,0.45);
+      border-radius: 3px;
+      padding: 0.15em 0.65em;
+    }
+
+    @media (max-width: 540px) {
+      .header-inner { flex-direction: column; text-align: center; gap: 1rem; }
+      header img { width: 90px; }
+    }
+
+    /* ── Stats bar ───────────────────────────────── */
+    .stats {
+      background: color-mix(in srgb, var(--navy) 90%, #000);
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .stats-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+
+    .stat-item {
+      padding: 1.3rem 1.2rem;
+      text-align: center;
+      border-right: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .stat-item:last-child { border-right: none; }
+
+    .stat-number {
+      display: block;
+      font-family: var(--sans);
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1;
+    }
+
+    .stat-label {
+      display: block;
+      margin-top: 0.3rem;
+      font-family: var(--sans);
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--sky);
+      opacity: 0.8;
+    }
+
+    /* ── Olive accent strip ──────────────────────── */
+    .accent-strip {
+      height: 4px;
+      background: linear-gradient(to right, var(--olive), #6aaa52, var(--olive));
+    }
+
+    /* ── Main content ────────────────────────────── */
+    main {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem 4.5rem;
+    }
+
+    .section-label {
+      font-family: var(--sans);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--olive);
+      margin-bottom: 1.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .section-label::after {
+      content: '';
+      flex: 1;
+      max-width: 220px;
+      height: 1px;
+      background: var(--olive-pale);
+    }
+
+    main p {
+      margin-bottom: 1.7rem;
+      font-size: 1.05rem;
+      color: #333;
+    }
+
+    main p:first-of-type::first-letter {
+      font-size: 3.2rem;
+      float: left;
+      line-height: 0.85;
+      margin: 0.08em 0.1em 0 0;
+      color: var(--navy);
+      font-weight: bold;
+    }
+
+    /* ── Links ───────────────────────────────────── */
+    a {
+      color: var(--blue);
+      text-decoration: underline;
+      text-decoration-color: var(--olive);
+      text-underline-offset: 3px;
+      transition: color 0.2s, text-decoration-color 0.2s;
+    }
+
+    a:hover {
+      color: var(--olive);
+      text-decoration-color: var(--blue);
+    }
+
+    /* ── Footer ──────────────────────────────────── */
+    footer {
+      background: var(--navy);
+      color: var(--sky);
+      text-align: center;
+      padding: 1.4rem 1rem;
+      font-family: var(--sans);
+      font-size: 0.82rem;
+    }
+
+    footer p { opacity: 0.7; }
+  
+    main h2 { font-family: var(--sans); font-size: 1.35rem; color: var(--navy); margin-bottom: 1.2rem; }
+    main p:first-of-type::first-letter { all: unset; }
+    .download { background: var(--olive-pale); border-left: 4px solid var(--olive); border-radius: 4px; padding: 1.1rem 1.4rem; margin-bottom: 2.2rem; font-family: var(--sans); font-size: 0.95rem; }
+    .download a { font-weight: 600; }
+    .back { display: inline-block; margin-top: 1rem; font-family: var(--sans); font-size: 0.9rem; }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="header-inner">
+      <img src="sask-peace.png"
+        alt="Saskatchewan Physicians for Justice and Peace logo — a dove with a stethoscope carrying an olive branch">
+      <div class="header-text">
+        <h1>Saskatchewan Physicians for Justice and Peace</h1>
+        <span class="abbr-tag">SKPJP</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="accent-strip"></div>
+
+  <main>
+    <p class="section-label">Addendum &middot; Palestine 2026</p>
+    <div class="download">
+      Download the full essay:
+      <a href="formation-of-the-israeli-state-2023.doc" download>The Formation of the Israeli State (2023), Word document</a>
+    </div>
+
+
+<h2>1948&ndash;present</h2>
+<p>Since 1948, Israel has systematically confiscated the land and properties of many of the few Palestinian Arabs that did not flee the violence during that year. Since then, the state of Israel has gradually expanded its borders to include over 90% of the original Palestinian territory. This includes most of the West Bank and Jerusalem, where 700,000-800,000 Jewish Israelis have settled throughout this area. Canada, the European Union, Britain and even the United States consider those settlements illegal but have turned a blind eye to this.</p>
+<p>The 700,000-800,000 Palestinian who fled the conflict, or were forcibly expelled from their homes and lands, have never been allowed to return. Their homes and properties were eventually confiscated by the Israeli state, without compensation, and either retained by the state or given to Jewish immigrants. It is ironic that after the 2<sup>nd</sup> World War, Jewish property and land, stolen by Germany and its allies, was returned to its rightful owners - Jews living throughout the world. Israel, however, refuses to recognize the same rights of Palestinians who similarly had their own lands and properties illegally taken by the state of Israel. </p>
+<p> The UN, the creator of the state of Israel, has demanded, on numerous occasions, that Israel respect the rights of Palestinians and that it return those properties to their rightful owners and recognize the rights of Palestinians to have their own state, as per the original UN partitioning of Palestine into an Israeli and Palestinian state. Israel has adamantly refused to do so. </p>
+<p>Israel is considered by many to have the 4<sup>th</sup> or 5<sup>th</sup> strongest military in the world. It also has, for the past 75 years, received massive amounts of military and economic support from the U.S,  frequently receiving half of all US military foreign aid(estimates range from 250-350 billion dollars) over that time period.</p>
+<p>Israel, like the United States, China and Russia, refuses to recognize the World Court of Justice - and for good reason. It does not want, nor has it ever been interested in, a fair and just solution to this conflict.  At every opportunity, over the last 75 years - and against international law- Israel has expanded into land that legally was to be part of the state of Palestine based on the same resolution that created the state of Israel.   </p>
+<p>Surely the rights of Palestinians (both those who live in Israel and the occupied territories), the rights of Palestinian refugees and the borders of the Israeli-Palestinian states should be determined by the International Court. A fair and just solution, to this ongoing conflict, should be based on international law and not what one side of this conflict would impose on the other.  To do otherwise just guarantees the continuation of this ongoing conflict and the global and regional instability it has created. </p>
+<p>Since October of 2023, officially, there has been over 74,000 Palestinian killed by the Israeli military, 23,000 were children, 83%, or more, were civilian non-combatants, there are nearly 60,000 orphaned children and over 90% of the Gaza strip has been destroyed by Israeli bombs and widespread demolition of buildings. Most of the medical clinics, hospitals, schools, universities, religious and historical sites and necessary infrastructure, for water and sanitation, have been destroyed or severely damaged. Israel has purposely targeted medical staff and their families killing some 1700 health care professionals. It has also targeted local journalist, killing some 270, and refused to allow international journalists and war crime investigators into the Gaza Strip so as to minimize international exposure of these atrocities. </p>
+<p>Since the ceasefire began in October 2025 Israel has killed over 1300 Palestinians and has expanded its no go zones to include 70% of the Gaza Strip. Israel continues to severely limit humanitarian supplies- medical supplies and equipment, temporary shelters and food- into the Gaza Strip. <br>
+<b>If you want to see the real human toll of this ongoing genocide in Gaza you can access videos and pictures via archivegenocide.com but what you will witness is very disturbing and emotionally traumatizing but reflects the ongoing and daily suffering of Palestinians in Gaza.</b> <br>
+</p>
+<p>If you want to read further on this conflict there are some excellent books in the bibliography of the essay The Formation of Israel and below are other books that are well worth reading. </p>
+<p><i>The Ethnic Cleansing of Palestine</i>, by Ilan Pappe, Pappé, an Israeli historian, who documents the purposeful displacement of roughly 800,000 Palestinians in 1948 by Jewish forces through instilling fear and terror, and ultimately forceful expulsion from their lands and homes, referred to as the Nakba by Palestinians. He argues that this was not an accidental byproduct of war or the result of voluntary flight. Instead, it was a deliberate, systematic campaign of ethnic cleansing driven by Zionist ideology to secure a de-Arabized, majority-Jewish state. To do so he provides detailed information and proof based on Israeli archives documenting the ethnic cleansing of Palestine during the creation of the Israeli state. </p>
+<p><i>The Israel Lobby and US Foreign Policy</i>, by Harvard professor Stephen Walt and John Mearsheimer</p>
+<p>An excellent book, documenting the influence and power of pro-Isreal and Jewish lobbying groups, such as AIPAC, over US foreign policy and both democrat and republican politicians. Although this book is specific to the United States, it reflects similar undue influence and activities in other democratic states, their leaders and the democratic process by Jewish lobbying groups </p>
+<p><i>Peace Not Apartheid</i> by former U.S. President Jimmy Carter</p>
+<p>Known for his advocacy of human rights during, and after, his presidency Jimmy Carter was critical of the state of Israel and felt it was an apartheid state and the basis of the book as summarized below: </p>
+<p>Carter contents that Israel is an apartheid state based on their activities in the West Bank and Gaza and believes it to be worse than what occurred in South Africa. </p>
+<p>That the main barrier to a two-state solution is Israel’s refusal to withdraw to the 1967 borders, their failure to respect international law and ongoing illegal confiscation of Palestinian land for Jewish settlements in the occupied territories of Jerusalem and the West Bank. </p>
+<p>Failure of the United States to push Israel to accept peace agreements and that peace can only be achieved by Israel complying with UN resolutions, recognizing the pre-1967 borders and the rights of Palestinians to self-determination</p>
+<p><i>The Fateful Triangle</i> by Noam Chomsky. This is an excellent book written by the renowned and famous Jewish American linguist. He argues, as noted below, that similar to former President Jimmy Carter, that US unwavering support for Israel is undermining long term American interests. </p>
+<p>The book's core arguments center around a few major points:</p>
+<ul>
+  <li><b><i>The U.S.-Israeli Alliance:</i></b><i> Chomsky argues that the U.S. supports Israel primarily to protect American economic and strategic interests in the region, rather than for moral or democratic reasons. He contends that Israel acts as a reliable bulwark against indigenous, radical nationalism that might threaten Western hegemony. </i></li>
+  <li><b><i>Israeli Rejectionism:</i></b><i> Contrary to mainstream Western narratives that depict Israel as seeking peace while Arab nations reject it, Chomsky claims that Israel (backed by the U.S.) has historically been the primary obstacle to a peaceful, two-state settlement. He draws heavily on Israeli state documents and mainstream press to support this. </i></li>
+  <li><b><i>Media and Intellectual Complicity:</i></b><i> A major theme is the alleged "pro-Zionist" bias in U.S. media and academia. Chomsky details how this bias systematically distorts the reality of the conflict, granting Israel a unique immunity from criticism and framing Palestinian resistance purely as terrorism rather than as a reaction to systemic oppression. </i></li>
+  <li><b><i>The 1982 Lebanon War:</i></b><i> The book extensively documents and condemns the 1982 Israeli invasion of Lebanon, citing severe civilian casualties, the use of disproportionate military force, and the enabling role of the United States.</i></li>
+</ul>
+<p>Ultimately, Chomsky concludes that U.S. policy and unquestioning support from American "friends of Israel" actually harms Israel's long-term interests by facilitating an oppressive status quo that leads to moral decay and ongoing violence.</p>
+<p>And if you would prefer to watch on YouTube, then you should watch the You Tube videos listed below. </p>
+<p>“The Occupation of the American Mind” This is an excellent commentary on the domination and control of US public media by Jewish organizations through intense lobbying, minimizing the historical basis for this conflict and labelling any journalists, critical of Israeli actions, as being antisemitic.  </p>
+<p> <i>General’s Son: Journey of an Israeli in Palestine</i> by Miko Peled, an Israeli who now lives in the U.S., Miko Peled was the son of a well respected Jewish general whose father was involved in the 1967 Six day war and he presents his own opinion, and that of his father’s, of this current conflict. </p>
+<p>  <i>How Israel Apartheid Destroyed My Hometown </i>by Dena Takruri. The latter examines the occupation of the West Bank by illegal Jewish settlers. </p>
+<p>Chris Hedge’s video on the current conflict. Chris was a reporter for the New York Times from 1990-2005 and a journalist for some 40 years, working on international conflicts and politics, and spend many years in the Middle East. He was one of a team of journalists that won a Pulitzer Prize for their reporting. The site is as listed below</p>
+<p>https://www.youtube.com/watch?v=ly6lfhOxTe0</p>
+<p><b>Also recommended is Double Down News, DDN, and various articles produced by Al Jazeera, the latter providing a more balanced view and the Palestinian side of the story that you rarely see in the Western press. Double Down News provides excellent investigative journalism and discussion on various topics, but mainly in regards to undue influence and corruption within governments, and the press, regarding the Middle East and this current conflict. At times disturbing but well worth watching. </b></p>
+
+    <a class="back" href="index.html">&larr; Back to home</a>
+  </main>
+
+  <footer>
+    <p>&copy; Saskatchewan Physicians for Justice and Peace</p>
+  </footer>
+
+</body>
+
+</html>
